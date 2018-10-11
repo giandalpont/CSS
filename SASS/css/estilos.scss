@@ -51,10 +51,9 @@ header {
   height: 90px;
   width: 100%;
   position: absolute;
-}
-
-header .container {
-  position: relative;
+  .container {
+    position: relative;
+  }
 }
 
 .menu-opcoes {
@@ -165,76 +164,72 @@ header .container {
   h2 {
     color: $cor-branco
   }
-}
-
-.plano {
-  background: white;
-  width: 18em;
-  display: inline-block;
-  margin: 1em 0 0 1.4em;
-  padding-bottom: 2em;
-  &:hover {
-    background: #dedede;
-  }
-  h3 {
-    color: $cor-branco;
-    font-size: 1.8em;
-    background: $cor-principal;
-    text-align: center;
-    height: 2em;
-    padding-top: .6em;
-    margin-top: 0;
-  }
-  div {
-    text-align: center;
-    color: $cor-principal;
-    font-size: 2.75em;
-  }
-}
-
-.itens-plano {
-  padding-left: 1.2em;
-  li {
-    font-size: 1em;
-    list-style: none;
-    border-bottom: 1px solid #acacac;
-    padding: .5em;
-    width: 14.8em;
-    &:last-child {
-      border: 0;
+  .plano {
+    background: white;
+    width: 18em;
+    display: inline-block;
+    margin: 1em 0 0 1.4em;
+    padding-bottom: 2em;
+    &:hover {
+      background: #dedede;
     }
+    h3 {
+      color: $cor-branco;
+      font-size: 1.8em;
+      background: $cor-principal;
+      text-align: center;
+      height: 2em;
+      padding-top: .6em;
+      margin-top: 0;
+    }
+    div {
+      text-align: center;
+      color: $cor-principal;
+      font-size: 2.75em;
+    }
+    .itens-plano {
+      padding-left: 1.2em;
+      li {
+        font-size: 1em;
+        list-style: none;
+        border-bottom: 1px solid #acacac;
+        padding: .5em;
+        width: 14.8em;
+        &:last-child {
+          border: 0;
+        }
+      }
+      span {
+        float: right;
+      }
+    }
+    button {
+      background: $cor-principal;
+      border: 0;
+      color: $cor-branco;
+      width: 210px;
+      height: 38px;
+      font-size: 1.2em;
+      @include borda-arredondada;
+      @include sombra-padrao;
+      margin-left: 2em;
+    }
+    .icone-check, .icone-x {
+      background: url(../imagens/sprite.png) no-repeat;
+      width: 18px;
+      height: 18px;
+    }
+    
+    .icone-check {
+      background-position: -5px -5px;
+    }
+    
+    .icone-x {
+      background-position: -33px -5px;
+    }
+    
   }
-  span {
-    float: right;
-  }
 }
-.plano button {
-  background: $cor-principal;
-  border: 0;
-  color: $cor-branco;
-  width: 210px;
-  height: 38px;
-  font-size: 1.2em;
-  @include borda-arredondada;
-  @include sombra-padrao;
-  margin-left: 2em;
-}
-
-.icone-check, .icone-x {
-  background: url(../imagens/sprite.png) no-repeat;
-  width: 18px;
-  height: 18px;
-}
-
-.icone-check {
-  background-position: -5px -5px;
-}
-
-.icone-x {
-  background-position: -33px -5px;
-}
-
-
 
 /** Blog **/
 .blog {
@@ -252,67 +247,65 @@ header .container {
     position: absolute;
     z-index: -1;
   }
-}
+  .post-destaque,
+  .posts-antigos {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+  }
 
-.post-destaque,
-.posts-antigos {
-  width: 48%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.post-destaque {
-  margin-right: 2em;
-}
-
-.post-destaque img {
-  width: 100%;
-}
-
-.posts-antigos a {
-  text-decoration: none;
-  color: black;
-  background: url(../imagens/icone-relogio.png) left center no-repeat;
-  padding-left: 2.5em;
-  height: 1.7em;
-  display: block;
-}
-
-.posts-antigos a:hover {
-  text-decoration: underline;
-}
-
-/** Contato **/
-.contato input,
-.contato button {
-  display: block;
-}
-
-form {
-  margin: 0 auto;
-  width: 50%;
-}
-
-.contato input,
-textarea {
-  width: 100%;
-  margin-bottom: .8em;
-  padding: 4px 8px;
-  @include borda-arredondada;
-  border: 2px solid #ccc;
-
-  button {
-    margin: 0 auto;
-    background: $cor-principal;
-    border: 0;
-    color: $cor-branco;
-    width: 210px;
-    height: 38px;
-    font-size: 1.2em;
-    @include borda-arredondada;
-    @include sombra-padrao;
+  .post-destaque {
+    margin-right: 2em;
+    img {
+      width: 100%;
+    }
+  }
+  .posts-antigos a {
+    text-decoration: none;
+    color: black;
+    background: url(../imagens/icone-relogio.png) left center no-repeat;
+    padding-left: 2.5em;
+    height: 1.7em;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
+
+
+/** Contato **/
+.contato{
+  input,
+  button {
+    display: block;
+  }
+  form {
+    margin: 0 auto;
+    width: 50%;
+  }
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: .8em;
+    padding: 4px 8px;
+    @include borda-arredondada;
+    border: 2px solid #ccc;
+  
+    button {
+      margin: 0 auto;
+      background: $cor-principal;
+      border: 0;
+      color: $cor-branco;
+      width: 210px;
+      height: 38px;
+      font-size: 1.2em;
+      @include borda-arredondada;
+      @include sombra-padrao;
+    }
+  }
+}
+
 /** Footer **/
 footer {
   display: block;
@@ -345,64 +338,64 @@ footer {
     img {
       width: 250px;
     }
+    .menu-rodape,
+    .social {
+      position: absolute;
+    }
+    
+    .menu-rodape{
+      top: 1em;
+      right: 0;
+      ul li {
+        display: inline-block;
+        margin-left: 2em;
+      } 
+      .social {
+        bottom: 0;
+        right: 0;
+      }
+    }
   } 
+  .menu-rodape li,
+  .social li {
+    display: inline;
+  }
+  
+  footer a {
+    color: $cor-branco;
+    text-decoration: none;
+  }
+  
+  .social li {
+    float: left;
+  }
+  
+  .social li a {
+    display: block;
+    width: 55px;
+    height: 55px;
+    @include image-replacement;
+    margin-left: 1em;
+  }
+  
+  .social a {
+    background-position: top;
+    background-size: 50px 50px;
+  }
+  
+  .social a[href*="facebook"] {
+    background-image: url(../imagens/facebook.png);
+  }
+  
+  .social a[href*="twitter"] {
+    background-image: url(../imagens/twitter.png);
+  }
+  
+  .social a[href*="instagram"] {
+    background-image: url(../imagens/instagram.png);
+  }
 }
 
-.menu-rodape,
-.social {
-  position: absolute;
-}
 
-.menu-rodape ul li {
-  display: inline-block;
-  margin-left: 2em;
-}
 
-.menu-rodape {
-  top: 1em;
-  right: 0;
-}
 
-.social {
-  bottom: 0;
-  right: 0;
-}
-
-.menu-rodape li,
-.social li {
-  display: inline;
-}
-
-footer a {
-  color: $cor-branco;
-  text-decoration: none;
-}
-
-.social li {
-  float: left;
-}
-
-.social li a {
-  display: block;
-  width: 55px;
-  height: 55px;
-  @include image-replacement;
-  margin-left: 1em;
-}
-
-.social a {
-  background-position: top;
-  background-size: 50px 50px;
-}
-
-.social a[href*="facebook"] {
-  background-image: url(../imagens/facebook.png);
-}
-
-.social a[href*="twitter"] {
-  background-image: url(../imagens/twitter.png);
-}
-
-.social a[href*="instagram"] {
-  background-image: url(../imagens/instagram.png);
-}
