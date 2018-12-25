@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <title>Nutrição</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="/css/normalize.css">
+</head>
+<body>
     <div class="container">
-          <h1>Cadastro Nutrição</h1>
+          <h1 class="titulo"></h1>
           <h2>Clientes</h2>
           <table class="table">
             <head>
@@ -20,48 +21,48 @@
                 <th>IMC</th>
               </tr>
             </head>
-            <tbody>
-              <tr>
-                <td>Paulo</td>
-                <td>100</td>
-                <td>2.00</td>
-                <td>10</td>
-                <td>0</td>
+            <tbody id="tabela-paciente">
+              <tr class="paciente" id="primeiro-paciente">
+                <td class="info-nome">Paulo</td>
+                <td class="info-peso">100</td>
+                <td class="info-altura">3.00</td>
+                <td class="info-gordura">10</td>
+                <td class="info-imc">0</td>
               </tr>
-              <tr>
-                <td>João</td>
-                <td>80</td>
-                <td>1.72</td>
-                <td>40</td>
-                <td>0</td>
+              <tr class="paciente">
+                <td class="info-nome">João</td>
+                <td class="info-peso">80</td>
+                <td class="info-altura">1.72</td>
+                <td class="info-gordura">40</td>
+                <td class="info-imc">0</td>
               </tr>
-              <tr>
-                <td>Erica</td>
-                <td>54</td>
-                <td>1.64</td>
-                <td>14</td>
-                <td>0</td>
+              <tr class="paciente">
+                <td class="info-nome">Erica</td>
+                <td class="info-peso">54</td>
+                <td class="info-altura">1.64</td>
+                <td class="info-gordura">14</td>
+                <td class="info-imc">0</td>
               </tr>
-              <tr>
-                <td>Douglas</td>
-                <td>85</td>
-                <td>1.73</td>
-                <td>24</td>
-                <td>0</td>
+              <tr class="paciente">
+                <td class="info-nome">Douglas</td>
+                <td class="info-peso">85</td>
+                <td class="altura">1.73</td>
+                <td class="info-gordura">24</td>
+                <td class="info-imc">0</td>
               </tr>
-              <tr>
-                <td>Tatiane</td>
-                <td>46</td>
-                <td>1.55</td>
-                <td>19</td>
-                <td>0</td>
+              <tr class="paciente">
+                <td class="info-nome">Tatiane</td>
+                <td class="info-peso">46</td>
+                <td class="info-altura">1.55</td>
+                <td class="info-gordura">19</td>
+                <td class="info-imc">0</td>
               </tr>
             </tbody>
           </table>
     </div>
 
 
-<script src="./js/main.js" charset="utf-8"></script>
+  <script src="./js/main.js" charset="utf-8"></script>
 
-  </body>
+</body>
 </html>
