@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nutrição</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/estilo.min.css">
 </head>
 <body>
@@ -59,52 +60,34 @@
           </tr>
         </tbody>
       </table>
-      
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-        Adicionar paciente
-      </button>
-      
-      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Adicionando novo paciente</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+
+      <section class="container">
+        <h2 id="titulo-form">Adicionar novo paciente</h2>
+        <form id="form-adicionar">
+            <div class="form-grup">
+                <label for="nome">Nome:</label>
+                <input class="form-control" id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
             </div>
-            <div class="modal-body">
-              <form id="form-adiciona">
-                <div class="form-group">
-                  <label for="nome">Nome:</label>
-                  <input type="nome" class="form-control" id="nome" placeholder="Digite o nome do seu paciente">
-                </div>
-                <div class="form-group">
-                  <label for="peso">Peso</label>
-                  <input type="text" class="form-control" id="peso" name="peso" placeholder="Digiteo peso do seu paciente">
-                </div>
-                <div class="form-group">
-                  <label for="altura">Altura</label>
-                  <input id="altura" class="form-control" type="text" name="altura" placeholder="Digite a altura do seu paciente">
-                </div>
-                <div class="form-group">
-                  <label for="gordura">% de Gordura:</label>
-                  <input id="gordura" class="form-control" type="text" name="gordura" placeholder="Digite a procentagem de gordura do seu paciente">
-                </div>
-              </form>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button id="adicionar-paciente" type="button" class="btn btn-primary">Adicionar</button>
-                  </div>
+            <div class="form-grup">
+                <label for="peso">Peso:</label>
+                <input class="form-control" id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="form-grup">
+                <label for="altura">Altura:</label>
+                <input class="form-control" id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+            </div>
+            <div class="form-grup">
+                <label for="gordura">% de Gordura:</label>
+                <input class="form-control" id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+            </div>
+    
+            <button id="adicionar-paciente"  class="btn btn-primary">Adicionar</button>
+        </form>
+    </section>
   </div>
 
-  <script src="./js/jquery-3.3.1.js" charset="utf-8"></script>
-  <script src="./js/bootstrap.js" charset="utf-8"></script>
-  <script src="./js/main.js" charset="utf-8"></script>
+  <!-- <script src="js/main.js" charset="utf-8"></script> -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
