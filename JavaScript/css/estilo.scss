@@ -8,3 +8,10 @@
     padding: 10px;
     color: #ec817e;
 }
+
+.remove{
+    opacity: 0;
+    color: red; 
+    font-weight: 800;
+    transition: 0.4s;
+}

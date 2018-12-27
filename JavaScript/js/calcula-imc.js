@@ -29,7 +29,7 @@ for (var i = 0; i < pacientes.length; i++) {
 
   var pesoEhValido = validaPeso(peso); 
   var alturaEhValida = validaAltura(altura);
-  console.log(pesoEhValido)
+  // console.log(pesoEhValido)
 
   if (!pesoEhValido) {
     // console.log("Peso inválido!");
